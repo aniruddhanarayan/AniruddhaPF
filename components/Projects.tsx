@@ -1,72 +1,85 @@
 'use client';
 
-const projects = [
-  {
-    title: 'Valley AI',
-    subtitle: 'Unified Defense Intelligence Platform',
-    description: 'A unified defense intelligence platform connecting command centers to last-mile soldiers for real-time, autonomous mission control. Revolutionizing how defense forces coordinate and execute operations.',
-    tags: ['AI', 'Real-time Systems', 'Mission Control', 'Command & Control'],
-    impact: 'Enabling autonomous decision-making at the edge'
-  },
-  {
-    title: 'Ankosha A Drones',
-    subtitle: 'Long-range Kamikaze Drone System',
-    description: 'A long-range, fire-and-forget kamikaze drone built for endurance and precision. Designed to execute high-stakes missions with minimal human intervention.',
-    tags: ['UAV', 'Autonomous Systems', 'Precision Engineering', 'Defense Tech'],
-    impact: 'Built for endurance and precision strikes'
-  },
-  {
-    title: 'Enterprise AI Solutions',
-    subtitle: 'Luxury Automotive Sector',
-    description: 'Delivering high-stake enterprise AI projects for Rolls-Royce, Bentley, Aston Martin, and Porsche to fund R&D operations. Building cutting-edge AI solutions for the luxury automotive industry.',
-    tags: ['Machine Learning', 'Enterprise AI', 'Data Analytics', 'Production Systems'],
-    impact: 'Funding defense tech R&D through commercial innovation'
-  }
-];
-
 export function Projects() {
   return (
-    <section id="projects" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center opacity-0 animate-on-scroll">
-          Key Projects
-        </h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 hover:scale-[1.02] transition-all duration-300 hover:shadow-lg opacity-0 animate-on-scroll"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">
-                {project.subtitle}
-              </p>
-              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white text-xs rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                <p className="text-sm font-semibold text-gray-900 dark:text-white">
-                  {project.impact}
-                </p>
-              </div>
-            </div>
-          ))}
+    <section>
+      <div className="section-heading">
+        <div className="icon-anim">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="5" className="crosshair-ring"/>
+            <circle cx="14" cy="14" r="10" className="crosshair-ring outer"/>
+            <line x1="14" y1="2" x2="14" y2="7" className="crosshair-line"/>
+            <line x1="14" y1="21" x2="14" y2="26" className="crosshair-line"/>
+            <line x1="2" y1="14" x2="7" y2="14" className="crosshair-line"/>
+            <line x1="21" y1="14" x2="26" y2="14" className="crosshair-line"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c0392b"/>
+          </svg>
         </div>
+        <h2>KEY PROJECTS</h2>
+      </div>
+      <div className="projects-list">
+
+        <div className="project-card">
+          <div>
+            <div className="project-name">Valley AI</div>
+            <div className="project-desc">
+              <span className="hl-steel">Unified defense intelligence platform</span> connecting command centers
+              to last-mile soldiers for real-time, autonomous mission control. The world&apos;s first
+              <span className="hl-crimson"> Physical AI Operating System</span> for autonomous drone coordination
+              in GPS-denied environments.
+            </div>
+            <div className="arch-block" style={{ marginTop: '20px' }}>
+              <span className="arch-block-label">ARCHITECTURE OVERVIEW</span>
+{`Command Center ──▶ Valley AI Core ──▶ Field Soldiers
+       │                 │                   │
+       │         Real-time Mesh              │
+       │        Autonomous Edge              │
+       └──────── Decision Engine ────────────┘
+* Real-time intelligence feeds
+* Autonomous mission execution at the edge
+* Encrypted C2 communication layers`}
+            </div>
+          </div>
+          <div className="project-stack">
+            <span className="stack-tag">AI</span>
+            <span className="stack-tag">REAL-TIME</span>
+            <span className="stack-tag">MISSION CONTROL</span>
+            <span className="stack-tag">C&amp;C</span>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <div>
+            <div className="project-name">Ankosha A Drones</div>
+            <div className="project-desc">
+              Long-range, <span className="hl-brown">fire-and-forget kamikaze drone</span> built for endurance and precision —
+              executing high-stakes missions with <span className="hl-grey">minimal human intervention</span>.
+              AI-powered precision target acquisition with no-recovery mission profiles.
+            </div>
+          </div>
+          <div className="project-stack">
+            <span className="stack-tag">UAV</span>
+            <span className="stack-tag">AUTONOMOUS</span>
+            <span className="stack-tag">DEFENSE TECH</span>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <div>
+            <div className="project-name">Enterprise AI Solutions</div>
+            <div className="project-desc">
+              High-stakes AI for <span className="hl-brown">Rolls-Royce · Bentley · Aston Martin · Porsche</span> —
+              funding defense research and development through <span className="hl-steel">commercial innovation</span>.
+              Production ML systems driving the dual-vertical business model.
+            </div>
+          </div>
+          <div className="project-stack">
+            <span className="stack-tag">ML</span>
+            <span className="stack-tag">ENTERPRISE AI</span>
+            <span className="stack-tag">ANALYTICS</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );

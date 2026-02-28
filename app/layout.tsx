@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Aniruddha Narayan | Defense Tech Innovator & AI Systems Builder",
-  description: "Founder & CEO of Aminuteman Technologies. Building AI-driven UAV and autonomous systems for defense sovereignty.",
-  keywords: ["Aniruddha Narayan", "Defense Tech", "AI Systems", "UAV", "Autonomous Systems", "Valley AI", "Ankosha Drones"],
+  title: "Aniruddha Narayan — Founder & CEO, Aminuteman Technologies",
+  description: "Founder & CEO of Aminuteman Technologies. Building AI-driven UAV and autonomous systems for defense sovereignty. 12× Hackathon Champion.",
+  keywords: ["Aniruddha Narayan", "Defense Tech", "AI Systems", "UAV", "Autonomous Systems", "Valley AI", "Ankosha Drones", "Aminuteman Technologies"],
   authors: [{ name: "Aniruddha Narayan" }],
   openGraph: {
-    title: "Aniruddha Narayan | Defense Tech Innovator",
+    title: "Aniruddha Narayan — Founder & CEO, Aminuteman Technologies",
     description: "Building AI-driven UAV and autonomous systems for defense sovereignty",
     type: "website",
   },
@@ -22,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+      </head>
+      <body>
         <ThemeProvider>
-          <Header />
           <main>{children}</main>
         </ThemeProvider>
       </body>

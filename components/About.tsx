@@ -2,43 +2,38 @@
 
 export function About() {
   return (
-    <section id="about" className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center opacity-0 animate-on-scroll">
-          About Me
-        </h2>
-
-        <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-          <p className="opacity-0 animate-on-scroll">
-            I&apos;m Aniruddha Narayan, Founder & CEO of <span className="font-semibold text-gray-900 dark:text-white">Aminuteman Technologies</span>,
-            a bootstrapped defense-tech company building AI-driven UAV and autonomous systems to protect soldiers and strengthen global defense sovereignty.
-          </p>
-
-          <p className="opacity-0 animate-on-scroll">
-            When I started studying defense technology, one truth stood out: <span className="font-semibold text-gray-900 dark:text-white">systems are decades behind</span>.
-            And when technology fails, people pay the price.
-          </p>
-
-          <p className="opacity-0 animate-on-scroll">
-            <span className="font-semibold text-gray-900 dark:text-white">At 18, I decided to change that.</span> We started from college labs,
-            assembling a <span className="font-semibold">22-member engineering team</span> united by a single idea:
-          </p>
-
-          <div className="pl-6 border-l-4 border-gray-900 dark:border-white my-8 opacity-0 animate-on-scroll">
-            <p className="font-semibold text-xl text-gray-900 dark:text-white">
-              Build from first principles.<br />
-              Build technology that can bear the risks humans shouldn&apos;t.
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 mt-8 border border-gray-200 dark:border-gray-700 hover:scale-[1.02] transition-all duration-300 opacity-0 animate-on-scroll">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
-            <p>
-              We&apos;re establishing <span className="font-semibold text-gray-900 dark:text-white">AI Brain sovereignty</span> by leading with
-              first-principles innovation, building systems where technology bears the highest risk, so more defenders come home safely.
-            </p>
-          </div>
+    <section>
+      <div className="section-heading">
+        <div className="icon-anim">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="11" stroke="#2c4a6e" strokeWidth="1" opacity="0.4"/>
+            <circle cx="14" cy="14" r="6" stroke="#2c4a6e" strokeWidth="1" opacity="0.5"/>
+            <circle className="radar-circle" cx="14" cy="14" r={8}/>
+            <line className="radar-sweep" x1="14" y1="14" x2="14" y2="3" strokeLinecap="round"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c0392b"/>
+          </svg>
         </div>
+        <h2>ABOUT</h2>
+      </div>
+      <div className="about-text">
+        <p>
+          I&apos;m Aniruddha Narayan — Founder and CEO of <span className="hl-crimson">Aminuteman Technologies</span>,
+          a bootstrapped defense-tech company building <span className="hl-steel">AI-driven UAV and autonomous systems</span> to
+          protect soldiers and strengthen global defense sovereignty.
+        </p>
+        <p>
+          When I started studying defense technology, one truth stood out:
+          <span className="hl-brown"> systems are decades behind</span>. And when technology fails, people pay the price.
+        </p>
+        <p>
+          At <span className="hl-crimson">18</span>, I decided to change that. Starting from college labs, I assembled a
+          <span className="hl-steel"> 22-member engineering team</span> united by one idea —
+          build from first principles. Build technology that can bear the risks humans shouldn&apos;t.
+        </p>
+        <p>
+          Our mission is to establish <span className="hl-grey">AI Brain sovereignty</span> — building systems where
+          technology bears the highest risk, so more defenders come home safely.
+        </p>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 'use client';
 
-import { Mail, Linkedin, Send } from 'lucide-react';
 import { useState } from 'react';
 
 export function Contact() {
@@ -26,137 +25,159 @@ export function Contact() {
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
       }
-    } catch (error) {
+    } catch {
       setFormStatus('error');
       setTimeout(() => setFormStatus('idle'), 5000);
     }
   };
+
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 opacity-0 animate-on-scroll">
-          Let&apos;s Build the Future
-        </h2>
-        <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto opacity-0 animate-on-scroll">
-          Interested in defense tech, AI systems, or potential collaboration? Let&apos;s connect.
-        </p>
+    <>
+      {/* EDUCATION */}
+      <section>
+        <div className="section-heading">
+          <div className="icon-anim">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="6" width="9" height="16" rx="1" className="book-page" style={{ transformOrigin: '13px 14px' }}/>
+              <rect x="15" y="6" width="9" height="16" rx="1" className="book-page right" style={{ transformOrigin: '15px 14px' }}/>
+              <line x1="14" y1="6" x2="14" y2="22" stroke="#4a2f1a" strokeWidth="1.5"/>
+            </svg>
+          </div>
+          <h2>EDUCATION</h2>
+        </div>
+        <div className="edu-card">
+          <div className="edu-year">JUL 2022<br/>JAN 2026</div>
+          <div>
+            <div className="edu-degree">Bachelor of Engineering — Computer Science</div>
+            <div className="edu-inst"><span className="hl-brown">Dr. D.Y. Patil Institute of Engineering, Management and Research</span> · Pune, Maharashtra, India</div>
+          </div>
+        </div>
+      </section>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12 opacity-0 animate-on-scroll">
-          <a
-            href="mailto:aniruddhanarayan36@gmail.com"
-            className="flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
-          >
-            <Mail size={20} />
-            <span>Email Me</span>
-          </a>
+      {/* LANGUAGES */}
+      <div className="divider"><div className="divider-line"></div><div className="divider-diamond"></div><div className="divider-line"></div></div>
 
-          <a
-            href="https://www.linkedin.com/in/aniruddha-narayan-8b06a1257"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            <Linkedin size={20} />
-            <span>LinkedIn</span>
-          </a>
+      <section>
+        <div className="section-heading">
+          <div className="icon-anim">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="20" r="2" fill="#3d6fa8"/>
+              <path d="M8 16 Q14 10 20 16" className="signal-wave"/>
+              <path d="M5 12 Q14 4 23 12" className="signal-wave"/>
+              <path d="M2 8 Q14 -2 26 8" className="signal-wave"/>
+            </svg>
+          </div>
+          <h2>LANGUAGES</h2>
+        </div>
+        <div className="lang-row">
+          <div className="lang-item">
+            <div className="lang-inner">
+              <div className="lang-name">ENGLISH</div>
+              <div className="lang-bar">
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+              </div>
+            </div>
+            <div className="lang-level">PROFESSIONAL</div>
+          </div>
+          <div className="lang-item">
+            <div className="lang-inner">
+              <div className="lang-name">HINDI</div>
+              <div className="lang-bar">
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+              </div>
+            </div>
+            <div className="lang-level">NATIVE</div>
+          </div>
+          <div className="lang-item">
+            <div className="lang-inner">
+              <div className="lang-name">MARATHI</div>
+              <div className="lang-bar">
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div><div className="lang-seg"></div>
+              </div>
+            </div>
+            <div className="lang-level">PROFESSIONAL</div>
+          </div>
+          <div className="lang-item">
+            <div className="lang-inner">
+              <div className="lang-name">SPANISH</div>
+              <div className="lang-bar">
+                <div className="lang-seg filled"></div><div className="lang-seg filled"></div>
+                <div className="lang-seg"></div><div className="lang-seg"></div><div className="lang-seg"></div>
+              </div>
+            </div>
+            <div className="lang-level">ELEMENTARY</div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONNECT */}
+      <div className="divider"><div className="divider-line"></div><div className="divider-diamond"></div><div className="divider-line"></div></div>
+
+      <section>
+        <div className="section-heading">
+          <div className="icon-anim">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="20" height="14" rx="1" stroke="#3d6fa8" strokeWidth="1.2"/>
+              <polyline points="4,8 14,16 24,8" stroke="#3d6fa8" strokeWidth="1.2" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          <h2>CONNECT</h2>
+        </div>
+        <div className="connect-links">
+          <a href="mailto:aniruddhanarayan36@gmail.com" className="connect-link">EMAIL</a>
+          <a href="https://linkedin.com/in/aniruddha-narayan-8b06a1257" className="connect-link" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+          <a href="https://github.com/aniruddhanarayan" className="connect-link" target="_blank" rel="noopener noreferrer">GITHUB</a>
         </div>
 
         {/* Contact Form */}
-        <div className="max-w-2xl mx-auto mt-12 opacity-0 animate-on-scroll">
-          <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-700">
-            <input type="hidden" name="access_key" value="bad41d1a-7c2e-484b-a260-a314bde23d9a" />
-            <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
-            <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+        <form onSubmit={handleSubmit} className="contact-form">
+          <input type="hidden" name="access_key" value="bad41d1a-7c2e-484b-a260-a314bde23d9a" />
+          <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
+          <input type="hidden" name="from_name" value="Portfolio Contact Form" />
 
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-left">Send a Message</h3>
+          <h3>SEND A MESSAGE</h3>
 
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-left">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent text-gray-900 dark:text-white transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
+          <div className="form-field">
+            <label htmlFor="name" className="form-label">NAME</label>
+            <input type="text" id="name" name="name" required className="form-input" placeholder="Your name" />
+          </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-left">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent text-gray-900 dark:text-white transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+          <div className="form-field">
+            <label htmlFor="email" className="form-label">EMAIL</label>
+            <input type="email" id="email" name="email" required className="form-input" placeholder="your.email@example.com" />
+          </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 text-left">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent text-gray-900 dark:text-white transition-colors resize-none"
-                  placeholder="Your message..."
-                />
-              </div>
+          <div className="form-field">
+            <label htmlFor="message" className="form-label">MESSAGE</label>
+            <textarea id="message" name="message" required className="form-input form-textarea" placeholder="Your message..." rows={5} />
+          </div>
 
-              <button
-                type="submit"
-                disabled={formStatus === 'submitting'}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <Send size={20} />
-                <span>{formStatus === 'submitting' ? 'Sending...' : 'Send Message'}</span>
-              </button>
+          <button type="submit" disabled={formStatus === 'submitting'} className="form-submit">
+            {formStatus === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
+          </button>
 
-              {formStatus === 'success' && (
-                <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-800 dark:text-green-200 text-sm">
-                  Thank you! Your message has been sent successfully.
-                </div>
-              )}
-
-              {formStatus === 'error' && (
-                <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-800 dark:text-red-200 text-sm">
-                  Oops! Something went wrong. Please try again or email directly.
-                </div>
-              )}
+          {formStatus === 'success' && (
+            <div className="form-success">
+              Thank you! Your message has been sent successfully.
             </div>
-          </form>
-        </div>
+          )}
 
-        <div className="pt-12 border-t border-gray-200 dark:border-gray-700 mt-12">
-          <div className="mb-6">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Education</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              Bachelor of Engineering in Computer Science
-            </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Dr. D.Y. Patil Institute of Engineering, Management and Research, Pune
-            </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              July 2022 - January 2026
-            </p>
-          </div>
+          {formStatus === 'error' && (
+            <div className="form-error">
+              Something went wrong. Please try again or email directly at aniruddhanarayan36@gmail.com
+            </div>
+          )}
+        </form>
+      </section>
 
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            <p className="mb-2">Building technology that bears the risks humans shouldn&apos;t.</p>
-            <p>&copy; {new Date().getFullYear()} Aniruddha Narayan. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      {/* FOOTER */}
+      <footer className="pf-footer">
+        <div className="footer-text">AMINUTEMAN TECHNOLOGIES PVT. LTD. · PUNE, INDIA</div>
+        <div className="footer-classify">DEFENSE TECHNOLOGY</div>
+      </footer>
+    </>
   );
 }
